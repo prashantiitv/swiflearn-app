@@ -1,0 +1,14 @@
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+}
+.btn-login {
+  width: 15%;
+  margin: 1% 5% 1% 5%;
+  background-color: #c95e53 !important;
+  border-color: #c95e53 !important;
+  border-radius: 20px !important;
+}

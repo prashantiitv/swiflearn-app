@@ -1,86 +1,74 @@
-# react-spring-3d-carousel
+# This project is a Swiflearn Assignment
 
-A 3D Carousel component for images built with [React](https://reactjs.org/) and utilizing [react-spring](https://github.com/react-spring/react-spring) for controlling slide transitions.
-It's primarily meant to be controlled via the goToSlide prop but I also provided a showNavigation prop if you don't feel like making your own navigation.
+To see the app live, [Click here](https://swiflearn-app.herokuapp.com/)
 
-This should go without saying, but if you use this component make sure to test it for performance and compatability with your target browsers.
+# Getting Started with Create React App
 
-## Example
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](react-spring-3d-carousel-example.gif)  
-[![Edit react-spring-3d-carousel-basic-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1v96j74484?view=preview)
+## Available Scripts
 
-## Installation and usage
+In the project directory, you can run:
 
-Install it via npm:
+### `yarn start`
 
-```
-npm i react-spring-3d-carousel
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-or yarn:
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-yarn add react-spring-3d-carousel
-```
+### `yarn test`
 
-Then import the Carousel component like so :
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-import Carousel from 'react-spring-3d-carousel';
-```
+### `yarn build`
 
-The only thing this component needs to run is an array of slides, which are objects with a unique key property and a content property containing an image instance :
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```
-const slides = [
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/800/?random" alt="1" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/800/?random" alt="2" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/600/800/?random" alt="3" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/500/?random" alt="4" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/800/?random" alt="5" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/500/800/?random" alt="6" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/600/?random" alt="7" />
-  },
-  {
-    key: uuidv4(),
-    content: <img src="https://picsum.photos/800/800/?random" alt="8" />
-  }
-];
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-...
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<Carousel slides={slides} />
-```
+### `yarn eject`
 
-And you're all set. You can also use props for better control of how the carousel looks and behaves:
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Props
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-| Name            | Default value                    | Description                                                                                                                                                                                                                                                                                          |
-| --------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| slides          | ---                              | An array containing elements of the form `{ key, content, onClick? }` where key holds any unique value and content holds a reference to a JSX `<img />` to be displayed. onClick is an optional property that may be used to pass a callback method which will be invoked when the slide is clicked. |
-| goToSlide       | `null`                           | Setting this prop will cause the carousel to animate towards the provided index in the slides array. If `showNavigation` is set to false this prop is how you're expected to control the carousel.                                                                                                   |
-| goToSlideDelay  | `200`                            | The amount of milliseconds to delay each slide before moving to the next one while animating towards the index provided in `goToSlide`.               |
-| offsetRadius    | `2`                              | Number of carousel elements to display to the sides of the current slide, this value is clamped between `1` and `Math.floor(slides.length/2)`, and defaults to 2 when it's possible (if there are enough slide elements).                                                                            |
-| animationConfig | `{ tension: 120, friction: 14 }` | A config object passed to the slides' Spring element to control the nature of their animation, for more information check the [react-spring docs](http://react-spring.surge.sh/#/api#configs).                                                                                                       |
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
